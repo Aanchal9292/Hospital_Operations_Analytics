@@ -1,0 +1,9 @@
+Department_ID,Department_Name,Location,Capacity
+1,Cardiology,"Block A, Floor 1",40
+2,Neurology,"Block B, Floor 2",25
+3,Orthopedics,"Block C, Floor 3",35
+4,General Medicine,"Block D, Floor 4",50
+5,Pediatrics,"Block E, Floor 1",30
+6,Dermatology,"Block F, Floor 2",15
+7,Emergency,"Block G, Floor 3",45
+8,Gynecology,"Block H, Floor 4",28

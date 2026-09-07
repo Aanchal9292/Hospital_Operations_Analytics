@@ -1,0 +1,81 @@
+-- =============================================================
+-- Hospital Operations Analytics — DAX Measures
+-- Paste into a dedicated "_Measures" table, or onto admissions/billing
+-- =============================================================
+
+Total Revenue =
+SUM(billing[Total_Amount])
+
+Total Patients =
+DISTINCTCOUNT(patients[Patient_ID])
+
+Total Admissions =
+COUNTROWS(admissions)
+
+Total Discharges =
+CALCULATE(COUNTROWS(admissions), NOT ISBLANK(admissions[Discharge_Date]))
+
+Average Revenue Per Patient =
+DIVIDE([Total Revenue], [Total Patients])
+
+Average Length of Stay =
+AVERAGEX(
+    FILTER(admissions, NOT ISBLANK(admissions[Discharge_Date])),
+    DATEDIFF(admissions[Admission_Date], admissions[Discharge_Date], DAY)
+)
+
+Average Waiting Time =
+AVERAGE(appointments[Waiting_Time])
+
+Appointment Completion Rate =
+DIVIDE(
+    CALCULATE(COUNTROWS(appointments), appointments[Status] = "Completed"),
+    COUNTROWS(appointments)
+)
+
+Cancellation Rate =
+DIVIDE(
+    CALCULATE(COUNTROWS(appointments), appointments[Status] = "Cancelled"),
+    COUNTROWS(appointments)
+)
+
+No-Show Rate =
+DIVIDE(
+    CALCULATE(COUNTROWS(appointments), appointments[Status] = "No-show"),
+    COUNTROWS(appointments)
+)
+
+Occupied Beds =
+CALCULATE(COUNTROWS(beds), beds[Availability_Status] = "Occupied")
+
+Available Beds =
+CALCULATE(COUNTROWS(beds), beds[Availability_Status] = "Available")
+
+Bed Occupancy Rate =
+DIVIDE([Occupied Beds], COUNTROWS(beds))
+
+Insurance Share % =
+DIVIDE(SUM(billing[Insurance_Amount]), [Total Revenue])
+
+Outstanding Payments =
+CALCULATE(SUM(billing[Patient_Payment]), billing[Payment_Status] <> "Paid")
+
+Readmissions (30-day) =
+-- Requires a helper column or calculated table joining each discharge to the
+-- patient's next admission date; see sql/analysis_queries.sql section 11 for
+-- the equivalent SQL logic (LEAD window function) to replicate as a DAX
+-- calculated table if you want this as a native Power BI measure.
+BLANK()
+
+-- =============================================================
+-- Date table (Modeling -> New table), then mark as Date table
+-- and relate to admissions[Admission_Date] / appointments[Appointment_Date]
+-- =============================================================
+DateTable =
+ADDCOLUMNS(
+    CALENDAR(DATE(2023,1,1), DATE(2025,12,31)),
+    "Year", YEAR([Date]),
+    "Month", FORMAT([Date], "MMM"),
+    "MonthNum", MONTH([Date]),
+    "Quarter", "Q" & FORMAT([Date], "Q")
+)

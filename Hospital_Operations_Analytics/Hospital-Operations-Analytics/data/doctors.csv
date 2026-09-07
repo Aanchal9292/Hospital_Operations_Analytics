@@ -1,0 +1,61 @@
+Doctor_ID,Doctor_Name,Department_ID,Specialization,Experience
+1,Dr. Rohan Mehta,7,Emergency Medicine,11
+2,Dr. Sanya Reddy,4,Diabetology,24
+3,Dr. Nikhil Bose,7,Emergency Medicine,1
+4,Dr. Vivaan Rao,7,Trauma Care,26
+5,Dr. Pooja Mehta,1,Cardiac Surgery,16
+6,Dr. Pooja Chawla,8,Obstetrics,5
+7,Dr. Aditya Chawla,7,Trauma Care,9
+8,Dr. Ananya Kapoor,7,Emergency Medicine,17
+9,Dr. Arjun Sharma,2,Neurosurgery,10
+10,Dr. Sara Iyer,4,Internal Medicine,4
+11,Dr. Riya Malhotra,4,Internal Medicine,20
+12,Dr. Diya Iyer,8,Gynecologic Oncology,20
+13,Dr. Riya Singh,7,Emergency Medicine,4
+14,Dr. Aarav Malhotra,7,Emergency Medicine,9
+15,Dr. Ananya Sharma,4,Diabetology,8
+16,Dr. Nikhil Kapoor,3,Joint Replacement,20
+17,Dr. Dev Kapoor,5,Child Immunology,22
+18,Dr. Rohan Mehta,1,Interventional Cardiology,22
+19,Dr. Ishaan Chawla,7,Emergency Medicine,28
+20,Dr. Neha Rao,7,Trauma Care,23
+21,Dr. Riya Mehta,7,Trauma Care,10
+22,Dr. Priya Iyer,4,Internal Medicine,4
+23,Dr. Rohan Singh,8,Obstetrics,18
+24,Dr. Myra Gupta,8,Reproductive Medicine,27
+25,Dr. Sara Sharma,7,Trauma Care,29
+26,Dr. Aditya Verma,2,Epileptology,7
+27,Dr. Rahul Joshi,4,Diabetology,7
+28,Dr. Vikram Reddy,1,Cardiac Surgery,2
+29,Dr. Meera Gupta,2,Epileptology,5
+30,Dr. Tara Chawla,7,Trauma Care,17
+31,Dr. Dev Gupta,7,Emergency Medicine,16
+32,Dr. Karan Joshi,8,Obstetrics,11
+33,Dr. Karan Reddy,4,Internal Medicine,9
+34,Dr. Ishaan Iyer,4,General Practice,25
+35,Dr. Anaya Kapoor,4,Diabetology,14
+36,Dr. Vikram Mehta,2,Epileptology,24
+37,Dr. Arjun Nair,2,Epileptology,28
+38,Dr. Riya Verma,5,Child Immunology,10
+39,Dr. Sara Verma,3,Joint Replacement,6
+40,Dr. Sara Das,7,Emergency Medicine,28
+41,Dr. Sara Khan,4,Internal Medicine,19
+42,Dr. Karan Joshi,7,Emergency Medicine,9
+43,Dr. Rohan Kapoor,7,Trauma Care,19
+44,Dr. Rahul Das,4,Diabetology,15
+45,Dr. Diya Rao,7,Emergency Medicine,27
+46,Dr. Diya Joshi,7,Trauma Care,8
+47,Dr. Rahul Reddy,4,Internal Medicine,29
+48,Dr. Meera Kapoor,3,Sports Medicine,28
+49,Dr. Vivaan Verma,7,Trauma Care,6
+50,Dr. Rohan Khan,2,Epileptology,5
+51,Dr. Ishaan Reddy,2,Neurosurgery,16
+52,Dr. Vikram Malhotra,1,Interventional Cardiology,2
+53,Dr. Meera Kapoor,7,Trauma Care,9
+54,Dr. Ananya Bose,7,Emergency Medicine,13
+55,Dr. Pooja Gupta,7,Trauma Care,29
+56,Dr. Karan Singh,7,Trauma Care,29
+57,Dr. Aarav Rao,4,General Practice,5
+58,Dr. Karan Joshi,5,Pediatric Care,26
+59,Dr. Sanya Iyer,2,Stroke Care,3
+60,Dr. Myra Mehta,1,Interventional Cardiology,22
